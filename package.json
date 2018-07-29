@@ -1,0 +1,21 @@
+{
+  "name": "indiepost-normalize-tags",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for normalize old tags",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npx node-lambda setup",
+    "test": "npx node-lambda run",
+    "package": "npx node-lambda package",
+    "deploy": "npx node-lambda deploy"
+  },
+  "author": "Jake KW Lee <bwv1050@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mysql2": "^1.5.3"
+  },
+  "devDependencies": {
+    "jest": "^23.4.2",
+    "node-lambda": "^0.11.7"
+  }
+}
