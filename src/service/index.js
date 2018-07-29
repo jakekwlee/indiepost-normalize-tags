@@ -43,7 +43,6 @@ const normalize = callback => {
                   } else {
                     console.error(e);
                   }
-                  errorCount++;
                   return null;
                 });
             })

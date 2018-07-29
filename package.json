@@ -1,6 +1,6 @@
 {
   "name": "indiepost-normalize-tags",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "AWS Lambda function for normalize old tags",
   "main": "index.js",
   "scripts": {
