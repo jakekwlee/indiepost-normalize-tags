@@ -1,6 +1,6 @@
 const { normalize } = require('./src/service');
 
-exports.handler = async (event, context, callback) => {
+exports.handler = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  await normalize(callback);
+  return normalize(callback);
 };

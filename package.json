@@ -1,20 +1,30 @@
 {
   "name": "indiepost-normalize-tags",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AWS Lambda function for normalize old tags",
   "main": "index.js",
   "scripts": {
     "setup": "npx node-lambda setup",
-    "test": "npx node-lambda run",
+    "test": "npx jest",
+    "lambda-test": "npx node-lambda run",
     "package": "npx node-lambda package",
     "deploy": "npx node-lambda deploy"
   },
   "author": "Jake KW Lee <bwv1050@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "mysql": "^2.16.0",
     "mysql2": "^1.5.3"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
     "jest": "^23.4.2",
     "node-lambda": "^0.11.7"
   }
