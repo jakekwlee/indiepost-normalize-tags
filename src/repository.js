@@ -13,6 +13,12 @@ const {
 module.exports = (() => {
   let pool = null;
 
+  const initialize = () => {
+    if (!pool || !pool.getConnection) {
+      pool = mysql.createPool(config.db);
+    }
+  };
+
   const executeQuery = (sqlQuery, args = null) => {
     return new Promise((resolve, reject) => {
       pool.query(sqlQuery, args, (error, results) => {
@@ -22,12 +28,6 @@ module.exports = (() => {
         resolve(results);
       });
     });
-  };
-
-  const initialize = () => {
-    if (!pool || !pool.getConnection) {
-      pool = mysql.createPool(config.db);
-    }
   };
 
   const selectAllTags = () => executeQuery(SELECT_ALL_TAGS);
